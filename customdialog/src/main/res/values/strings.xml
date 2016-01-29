@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">customdialog</string>
+    <string name="tips_cancel">取消</string>
+    <string name="tips_sure">确定</string>
 </resources>
