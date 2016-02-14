@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.graphics.Rect;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -112,6 +113,8 @@ public class CustomDialog extends Dialog{
             View view1 = window.getDecorView();
             view1.getWindowVisibleDisplayFrame(rect);
             windowParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
+            DisplayMetrics dm = context.getResources().getDisplayMetrics();
+            windowParams.width = (int) (dm.widthPixels - dm.density * 50);
             window.setBackgroundDrawableResource(android.R.color.transparent); //设置背景色透明
             window.setAttributes(windowParams);
 
